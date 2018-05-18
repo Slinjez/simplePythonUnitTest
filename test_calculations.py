@@ -14,7 +14,7 @@ class TestCalculation(unittest.TestCase):
     def testAdditionString(self):
         #i want to test if the function will raise a value error if I feed the function a string as a parameter
         result=Calculations.addition('two',3)
-        self.assertRaises(self,result,ValueError)
+        self.assertRaises(TypeError,result)
 
 if __name__ == '__main__':
     unittest.main()
