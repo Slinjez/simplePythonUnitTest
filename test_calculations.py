@@ -12,10 +12,6 @@ class TestCalculation(unittest.TestCase):
         result=Calculations.addition(2,3)
         self.assertNotEqual(result,8)    
     def testAdditionString(self):
-        #i want to test if the function will raise a value error if I feed the function a string as a parameter
-       # result=Calculations.addition('two',3)
-       # self.assertRaises(TypeError,result)
-
         with self.assertRaises(TypeError):
             Calculations.addition("two",3)
 
