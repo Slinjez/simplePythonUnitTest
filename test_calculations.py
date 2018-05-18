@@ -3,14 +3,11 @@ from calculations import Calculations
 
 class TestCalculation(unittest.TestCase):
     def testAdditionNumbers(self):
-        result=Calculations.addition(2,3)
-        self.assertEqual(result,5)
+        self.assertEqual(Calculations.addition(2,3),5)
     def testAdditionNegatives(self):
-        result=Calculations.addition(-2,3)
-        self.assertEqual(result,1)
+        self.assertEqual(Calculations.addition(-2,3),1)
     def testAdditionFalseOutput(self):
-        result=Calculations.addition(2,3)
-        self.assertNotEqual(result,8)    
+        self.assertNotEqual(Calculations.addition(2,3),8)    
     def testAdditionString(self):
         with self.assertRaises(TypeError):
             Calculations.addition("two",3)
